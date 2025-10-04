@@ -20,12 +20,6 @@ Tujuannya untuk memahami cara kerja komponen dasar Transformer: **Token Embeddin
 pip install numpy matplotlib
 ````
 
-Jika menggunakan Python 3.13 dengan path khusus:
-
-```bash
-"C:\Program Files\Python313\python.exe" -m pip install numpy matplotlib
-```
-
 ---
 
 ## ▶️ Cara Menjalankan
