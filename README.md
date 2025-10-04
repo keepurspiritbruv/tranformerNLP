@@ -1,62 +1,64 @@
+Oke, aku rapikan README-mu biar sekali copy-paste sudah jadi, plus tambahkan cara run **test** dan **visualize**.
+
+Berikut versi final:
+
+````markdown
 # Transformer From Scratch (NumPy)
 
-Proyek ini adalah implementasi sederhana dari arsitektur Transformer **dari nol** menggunakan **NumPy**.  
-Tujuannya adalah untuk memahami cara kerja komponen dasar Transformer, mulai dari **Token Embedding**, **Positional Encoding**, **Attention**, hingga **Feed-Forward Network**.
+Proyek ini adalah implementasi sederhana dari **Decoder-Only Transformer** menggunakan **NumPy** tanpa framework deep learning (seperti PyTorch/TensorFlow).  
+Tujuannya untuk memahami cara kerja komponen dasar Transformer: **Token Embedding, Positional Encoding, Multi-Head Attention, Feed-Forward Network, Layer Normalization, dan Causal Masking**.
 
 ---
 
 ## 📦 Dependensi
-
-- Python **3.12+** (direkomendasikan 3.12 atau 3.13)  
+- Python **3.12+** (disarankan 3.13)  
 - [NumPy](https://numpy.org/)  
+- [Matplotlib](https://matplotlib.org/) (opsional, untuk visualisasi)
 
-Install NumPy dengan:
+### Instalasi
+```bash
+pip install numpy matplotlib
+````
+
+Jika menggunakan Python 3.13 dengan path khusus:
 
 ```bash
-pip install numpy
+"C:\Program Files\Python313\python.exe" -m pip install numpy matplotlib
+```
 
 ---
 
 ## ▶️ Cara Menjalankan
 
-Clone / buka folder project
-Pastikan Anda berada di dalam folder Transformer/ yang berisi:
+### 1. Jalankan Test Transformer
 
-transformer_numpy.py
-test_transformer.py
+Pastikan Anda berada di dalam folder project yang berisi `transformer_numpy.py` dan `test_transformer.py`.
+Lalu jalankan:
 
-
-Jalankan test suite
-Gunakan perintah berikut:
-
+```bash
 python test_transformer.py
+```
 
+atau (jika interpreter Python ada di lokasi tertentu):
 
-atau jika interpreter Python ada di lokasi tertentu:
-
+```bash
 "C:\Program Files\Python313\python.exe" test_transformer.py
+```
 
+Program akan menampilkan hasil uji untuk setiap komponen beserta ringkasan akhir.
 
-Hasil output
-Program akan menampilkan hasil pengujian setiap komponen. 
+---
 
-Contoh:
->>> Running Transformer Tests...
-======================================================================
-TRANSFORMER COMPREHENSIVE TEST SUITE
-======================================================================
-Testing all components of the Transformer implementation...
+### 2. Jalankan Visualisasi
 
-TEST: Token Embedding .......... ✅ PASSED
-TEST: Positional Encoding ...... ✅ PASSED
-TEST: Multi-Head Attention ..... ✅ PASSED
-TEST: Feed-Forward Network ..... ❌ FAILED
-...
+Untuk melihat distribusi softmax dan struktur causal mask:
 
-======================================================================
-TEST SUMMARY
-======================================================================
-Total tests: 11
-✅ Passed: 7
-❌ Failed: 4
-Success rate: 63.6%
+```bash
+python visualize_tests.py
+```
+
+Hasil visual akan tersimpan dalam file PNG di folder project, misalnya:
+
+* `softmax_distribution.png`
+* `causal_mask.png`
+
