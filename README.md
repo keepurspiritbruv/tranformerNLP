@@ -1,7 +1,3 @@
-Oke, aku rapikan README-mu biar sekali copy-paste sudah jadi, plus tambahkan cara run **test** dan **visualize**.
-
-Berikut versi final:
-
 ````markdown
 # Transformer From Scratch (NumPy)
 
